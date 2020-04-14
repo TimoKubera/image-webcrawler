@@ -4,6 +4,7 @@ from selenium.webdriver import ActionChains;
 import sys
 
 MIN_ARG_LEN = 2;
+FLAG = 1;
 
 # The path needs to be updated according to your installation path of the chromedriver.
 chromedriver = "/usr/local/bin/chromedriver"
@@ -30,9 +31,9 @@ def crawl(url):
 if len(sys.argv) < MIN_ARG_LEN:
     print("Please enter at least one valid URL!");
 # To do: Optionally download the images.
-elif sys.argv[1] == "-dl":
+elif sys.argv[FLAG] == "-dl":
     dl = True;
-    if len(sys.argv) < MIN_ARG_LEN + 1:
+    if len(sys.argv) < MIN_ARG_LEN + FLAG:
         print("Please enter at least one valid URL!");
     else:
         for i in range(2, len(sys.argv)):
