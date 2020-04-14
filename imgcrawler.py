@@ -1,13 +1,13 @@
 from selenium import webdriver;
 from selenium.webdriver import ChromeOptions;
 from selenium.webdriver import ActionChains;
-import sys
+import sys;
 
 MIN_ARG_LEN = 2;
 FLAG = 1;
 
 # The path needs to be updated according to your installation path of the chromedriver.
-chromedriver = "/usr/local/bin/chromedriver"
+chromedriver = "/usr/local/bin/chromedriver";
 opts = ChromeOptions();
 opts.headless = False;
 driver = webdriver.Chrome(executable_path = chromedriver, options = opts);
